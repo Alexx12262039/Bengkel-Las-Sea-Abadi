@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Bengkel Las Sea Abadi - Konstruksi Besi Berkualitas</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="table_style2.css">
+</head>
+<body>
+
+    <header>
+        <h1>Jasa Bengkel Las Sea Abadi</h1>
+        <p>Solusi konstruksi besi kokoh, desain modern, pengerjaan rapi, dan bergaransi untuk hunian maupun tempat usaha Anda.</p>
+        <div class="hero-actions">
+            <a href="#pesan" class="btn-hero btn-primary">📝 Pesan &amp; Survei Gratis</a>
+            <a href="#kontak" class="btn-hero btn-outline">📞 Hubungi Kami</a>
+        </div>
+    </header>
+
+        <section class="card">
+            <h2>Layanan Unggulan Kami</h2>
+            <ul class="services-grid">
+                <li>🛡️ Pagar Besi Minimalis &amp; Tempa</li>
+                <li>🪵 Pagar GRC Motif Kayu Estetik</li>
+                <li>🏠 Kanopi Baja Ringan &amp; Besi Hollow</li>
+                <li>🪟 Teralis Jendela &amp; Pintu Pengaman</li>
+                <li>🪜 Railing Tangga &amp; Balkon Modern</li>
+                <li>🛠️ Perbaikan &amp; Pengecatan Ulang Besi</li>
+            </ul>
+            <div class="features">
+                <span>✓ Material SNI Asli</span>
+                <span>✓ Las Rapi &amp; Kuat</span>
+                <span>✓ Gratis Survei Lokasi</span>
+                <span>✓ Harga Transparan</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Daftar Estimasi Harga</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr class="head">
+                            <th>Jenis Pekerjaan</th>
+                            <th>Spesifikasi Material Utama</th>
+                            <th>Estimasi Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pagar Besi Minimalis</strong></td>
+                            <td>Besi Hollow Galvanis 4x4 (Anti Karat)</td>
+                            <td class="price-tag">Rp 550.000 / m&sup2;</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pagar GRC Motif Kayu</strong></td>
+                            <td>Hollow Galvanis + Papan GRC Serat Kayu</td>
+                            <td class="price-tag">Rp 650.000 / m&sup2;</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kanopi Atap Alderon</strong></td>
+                            <td>Besi Hollow 4x6 + Atap Alderon Peredam Panas</td>
+                            <td class="price-tag">Rp 750.000 / m&sup2;</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teralis Jendela</strong></td>
+                            <td>Besi Nako 12mm Full + Cat Dasar Anti Karat</td>
+                            <td class="price-tag">Rp 350.000 / unit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <p class="note-harga">*Harga sudah termasuk biaya pemasangan dan pengiriman area kota. Harga dapat menyesuaikan ketebalan besi dan tingkat kerumitan motif.</p>
+        </section>
+
+        <section class="card" id="pesan">
+            <h2>Cara &amp; Formulir Pemesanan</h2>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Isi Formulir</h4>
+                    <p>Pilih layanan &amp; kirim detail kebutuhan Anda.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Survei Gratis</h4>
+                    <p>Tim kami datang mengukur lokasi &amp; bawa sampel.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Produksi &amp; Pasang</h4>
+                    <p>Pengerjaan rapi di bengkel lalu dipasang di lokasi.</p>
+                </div>
+            </div>
+
+            <form id="orderForm" onsubmit="kirimKeWhatsApp(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="title" for="nama">Nama Lengkap *</label>
+                        <input type="text" id="nama" placeholder="Contoh: Budi Santoso" required>
+                    </div>
+
+                        <label class="title" for="telepon">Nomor WhatsApp Anda *</label>
+                        <input type="tel" id="telepon" placeholder="Contoh: 0821-3879-6300" required>
+                    </div>
+                </div>
+
+                    <label class="title" for="layanan">Jenis Pesanan</label>
+                    <select id="layanan">
+                        <option value="Pagar Besi Minimalis">Pagar Besi Minimalis</option>
+                        <option value="Pagar GRC Motif Kayu">Pagar GRC Motif Kayu</option>
+                        <option value="Kanopi (Alderon / Spandek)">Kanopi (Alderon / Spandek / Solarflat)</option>
+                        <option value="Teralis Jendela / Pintu Pengaman">Teralis Jendela / Pintu Pengaman</option>
+                        <option value="Railing Tangga / Balkon">Railing Tangga / Balkon</option>
+                        <option value="Custom / Perbaikan">Lainnya (Custom / Perbaikan)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span class="title">Jadwalkan Survei Pengukuran Lokasi? (Gratis)</span>
+                    <div class="radio-group">
+                        <label><input type="radio" name="survei" value="Ya, jadwalkan survei" checked> Ya, jadwalkan survei</label>
+                        <label><input type="radio" name="survei" value="Belum, tanya estimasi harga dulu"> Belum, tanya estimasi harga dulu</label>
+                    </div>
+                </div>
+
+                    <label class="title" for="catatan">Perkiraan Ukuran &amp; Alamat Lokasi *</label>
+                    <textarea id="catatan" rows="3" placeholder="Contoh: Pagar panjang 6 meter, tinggi 1,5 meter. Alamat di Jl. Veteran, Umbulharjo, Yogyakarta." required></textarea>
+                </div>
+
+                <div class="submit">
+                    <button type="submit">💬 Kirim Pesanan via WhatsApp Sekarang</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card" id="kontak">
+            <h2>Kontak &amp; Lokasi Workshop</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>Hubungi Langsung</h3>
+                    <ul class="contact-list">
+                        <li>📱 <div><strong>WhatsApp / Telepon:</strong><br><a href="https://wa.me" target="_blank">+62 821-3879-6300 (Admin Sea Abadi)</a></div></li>
+                        <li>✉️ <div><strong>Email:</strong><br><a href="mailto:bengkellasseaabadi@gmail.com">bengkellasseaabadi@gmail.com</a></div></li>
+                        <li>⏰ <div><strong>Jam Operasional:</strong><br>Senin – Sabtu: 08.00 – 17.00 WIB<br><small>(Minggu tetap melayani janji survei)</small></div></li>
+                    </ul>
+                <div class="contact-box">
+                    <h3>Alamat Bengkel / Workshop</h3>
+                    <ul class="contact-list">
+                        <li>📍 <div><strong>Bengkel Las Sea Abadi</strong><br>Jl. Babaran No. 45, Umbulharjo, Kota Yogyakarta, DIY 55161</div></li>
+                        <li>🚚 <div><strong>Area Layanan:</strong><br>Seluruh wilayah Kota Yogyakarta, Sleman, Bantul, Kulon Progo, dan Gunungkidul.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    <a href="https://wa.me?text=Halo%20Bengkel%20Las%20Sea%20Abadi,%20saya%20ingin%20konsultasi%20pembuatan%20konstruksi%20besi." class="floating-wa" target="_blank">
+        💬 Chat WhatsApp
+    </a>
+
+    <footer>
+        &copy; 2026 Bengkel Las Sea Abadi. Melayani sepenuh hati dengan kualitas terbaik.
+    </footer>
+
+    <script>
+        function kirimKeWhatsApp(event) {
+            event.preventDefault();
+
+            const nomorWA = "6282138796300";
+
+            const nama = document.getElementById("nama").value;
+            const telepon = document.getElementById("telepon").value;
+            const layanan = document.getElementById("layanan").value;
+            const survei = document.querySelector('input[name="survei"]:checked').value;
+            const catatan = document.getElementById("catatan").value;
+
+            const pesan = `Halo *Bengkel Las Sea Abadi*, saya ingin memesan / konsultasi:\n\n` +
+                          `• *Nama:* ${nama}\n` +
+                          `• *No. WA:* ${telepon}\n` +
+                          `• *Jenis Pesanan:* ${layanan}\n` +
+                          `• *Survei Lokasi:* ${survei}\n` +
+                          `• *Ukuran & Alamat:* ${catatan}\n\n` +
+                          `Mohon informasi selanjutnya. Terima kasih.`;
+
+            const urlWA = `https://wa.me{nomorWA}?text=${encodeURIComponent(pesan)}`;
+            window.open(urlWA, "_blank");
+        }
+    </script>
+
+</body>
+</html>

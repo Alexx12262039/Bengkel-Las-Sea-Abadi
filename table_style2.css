@@ -1,0 +1,524 @@
+:root {
+    --primary: #1e293b;      /* Biru gelap industrial */
+    --accent: #ea580c;       /* Oranye api las */
+    --accent-hover: #c2410c;
+    --wa-green: #16a34a;     /* Hijau WhatsApp */
+    --wa-hover: #15803d;
+    --bg-light: #f8fafc;
+    --text-dark: #334155;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero Header dengan Latar Belakang Foto Kanopi */
+header {
+    background: 
+        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.85)),
+        url('bg-header.JPEG') center center / cover no-repeat;
+    color: var(--white);
+    padding: 75px 20px 100px;
+    text-align: center;
+    border-bottom: 5px solid var(--accent);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.25;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.08rem;
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #f1f5f9;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-hero {
+    padding: 13px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
+}
+
+.btn-outline {
+    background-color: rgba(15, 23, 42, 0.45);
+    border: 2px solid var(--white);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+/* Container Utama */
+.container {
+    max-width: 960px;
+    margin: -45px auto 40px;
+    padding: 0 16px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.3;
+}
+
+h2::before {
+    content: '';
+    display: inline-block;
+    flex-shrink: 0;
+    width: 6px;
+    height: 24px;
+    background-color: var(--accent);
+    border-radius: 3px;
+}
+
+/* Grid Layanan */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    list-style: none;
+}
+
+.services-grid li {
+    background: #f1f5f9;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-grid li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: #fff7ed;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px dashed #cbd5e1;
+    font-size: 0.85rem;
+}
+
+.features span {
+    background: #ecfdf5;
+    color: #047857;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Tabel Harga (Desktop) */
+.table-responsive {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+th, td {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr.head th {
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 600;
+}
+
+tr.head th:first-child { border-top-left-radius: 8px; }
+tr.head th:last-child { border-top-right-radius: 8px; }
+
+tbody tr:nth-child(even) { background-color: #f8fafc; }
+tbody tr:hover { background-color: #fff7ed; }
+
+.price-tag {
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.note-harga {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* Langkah Pemesanan */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.step-item {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    padding: 15px 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+
+.step-item h4 {
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.step-item p {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.4;
+}
+
+/* Formulir Pemesanan */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label.title, span.title {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--primary);
+}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: var(--white);
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    background: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+input[type="radio"] {
+    accent-color: var(--accent);
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.submit button {
+    width: 100%;
+    background-color: var(--wa-green);
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+}
+
+.submit button:hover {
+    background-color: var(--wa-hover);
+}
+
+.submit button:active {
+    transform: scale(0.98);
+}
+
+/* Bagian Kontak & Lokasi */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.contact-box {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-box h3 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 0.92rem;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-list a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol WA Melayang */
+.floating-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--wa-green);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 999;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.floating-wa:hover {
+    transform: scale(1.05);
+    background-color: var(--wa-hover);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 16px 90px;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   OPTIMASI KHUSUS LAYAR HP (MOBILE <= 650px)
+   ========================================= */
+@media (max-width: 650px) {
+    header {
+        padding: 50px 16px 75px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-hero {
+        width: 100%;
+    }
+
+    .card {
+        padding: 20px 16px;
+        margin-bottom: 18px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr.head {
+        display: none;
+    }
+
+    tbody tr {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0;
+        border-left: 4px solid var(--accent);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+    }
+
+    tbody td {
+        border: none;
+        padding: 3px 0;
+        font-size: 0.92rem;
+    }
+
+    tbody td:first-child {
+        font-size: 1.05rem;
+        color: var(--primary);
+    }
+
+    tbody td:nth-child(2) {
+        color: #475569;
+        font-size: 0.88rem;
+    }
+
+    tbody td.price-tag {
+        margin-top: 6px;
+        padding-top: 6px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 1rem;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .step-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .step-number {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .floating-wa {
+        bottom: 15px;
+        right: 15px;
+        padding: 11px 16px;
+        font-size: 0.9rem;
+    }
+}
